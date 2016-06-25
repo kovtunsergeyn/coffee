@@ -74,7 +74,21 @@
                 <div class="uk-grid" data-uk-grid-match data-uk-grid-margin>
 
                     <main class="<?= $view->position()->exists('sidebar') ? 'uk-width-medium-3-4' : 'uk-width-1-1'; ?>">
+                       
+                       <?php if ($view->position()->exists('bread')) : ?>
+                    <div class="bread">
+                        <?= $view->position('bread', 'position-blank.php') ?>
+                    </div>
+                    <?php endif ?>
                         <?= $view->render('content') ?>
+                        
+<!--                        сюда будет вставляться таблица с результатами расчета-->
+                       <?php if ($view->position()->exists('test')) : ?>
+                    <div class="test">
+                        <?= $view->position('test', 'test-test.php') ?>
+                    </div>
+                    <?php endif ?>
+                   
                     </main>
 
                     <?php if ($view->position()->exists('sidebar')) : ?>

@@ -23,6 +23,8 @@ return [
         'hero' => 'Hero',
         'top' => 'Top',
         'sidebar' => 'Sidebar',
+        'bread' => 'Bread',
+        'test' => 'Test',
         'bottom' => 'Bottom',
         'footer' => 'Footer',
         'offcanvas' => 'Offcanvas'
@@ -147,7 +149,7 @@ return [
             }
 
             if ($params['hero_parallax'] && $view->position()->exists('hero') && $params['hero_image']) {
-                $classes['parallax'] = 'data-uk-parallax="{bg: \'-400\'}"';
+                $classes['parallax'] = 'data-uk-parallax="{bg: \'-150\'}"';
             }
 
             if ($params['hero_contrast'] && $params['hero_image']) {
